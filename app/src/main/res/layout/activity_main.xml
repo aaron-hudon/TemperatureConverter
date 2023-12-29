@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <!--/*
+    * Application Title:activity_main.xml
+    * Author: Aaron Hudon
+    * Keene State College Computer Science
+    * Date: September 2022
+    * Purpose: Holds the layout information for the display of text fields and buttons
+    */
+    -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E1DCD8"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    // sets the constraints for getVal
+    //Text edit field for user input of a numerical value
+    <EditText
+        android:id="@+id/getVal"
+        android:layout_width="371dp"
+        android:layout_height="48dp"
+        android:layout_margin="15dp"
+        android:hint="Enter Temperature"
+        android:inputType="number"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    //sets the constrains for the text view box for a given temperature
+    <TextView
+        android:id="@+id/showResult"
+        android:layout_width="match_parent"
+        android:layout_height="94dp"
+        android:layout_margin="15dp"
+        android:fontFamily="@font/press_start_2p"
+        android:text="0.0"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.15" />
+
+// sets the layout for the radio buttons
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="423dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp">
+
+        //radio button for fahrenheit to celsius
+        <RadioButton
+            android:id="@+id/f2c"
+            android:layout_width="184dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/press_start_2p"
+            android:text="F -> C"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/c2f"
+            android:checked="true"/>
+
+        //radio button for fahrenheit to kelvin
+        <RadioButton
+            android:id="@+id/f2k"
+            android:layout_width="184dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/press_start_2p"
+            android:text="F -> K"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/c2f" />
+
+        //radio button for celsius to fahrenheit
+        <RadioButton
+            android:id="@+id/c2f"
+            android:layout_width="184dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:fontFamily="@font/press_start_2p"
+            android:text="  C -> F"
+            android:textSize="18sp" />
+
+        //radio button for celsius to kelvin
+        <RadioButton
+            android:id="@+id/c2k"
+            android:layout_width="184dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:fontFamily="@font/press_start_2p"
+            android:text="  C -> K"
+            android:textSize="18sp" />
+
+        //radio button for kelvin to fahrenheit
+        <RadioButton
+            android:id="@+id/k2f"
+            android:layout_width="183dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:fontFamily="@font/press_start_2p"
+            android:text="  K -> F"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        //radio button for kelvin to celsius
+        <RadioButton
+            android:id="@+id/k2c"
+            android:layout_width="183dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:fontFamily="@font/press_start_2p"
+            android:text="  K -> C"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="272dp"
+        android:layout_height="249dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical">
+
+        // button to display results of conversion
+        <Button
+            android:id="@+id/rsltBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/my_button"
+            android:fontFamily="@font/press_start_2p"
+            android:text="show result"
+            android:textSize="16sp" />
+
+        // button to clear out options and reset the app
+        <Button
+            android:id="@+id/againBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/my_button"
+            android:fontFamily="@font/press_start_2p"
+            android:text="Again"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+</LinearLayout>
+
